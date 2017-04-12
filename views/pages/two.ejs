@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+<% include ../partials/nav %>
+
+<img src="/images/feta.jpg" alt="Feta" height="600" width="800">
+
+<% Object.keys(contents).forEach(function (id) { %>
+<article>
+  <h2><%= contents[id].title %></h2>
+  <p><%= contents[id].news %></p>
+</article>
+<% }) %>
+
+
+
+<% include ../partials/footer %>

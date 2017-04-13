@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+<% include ../partials/nav %>
+
+
+
+<% Object.keys(cheeses).forEach(function (id) { %>
+<article>
+  <img src="/images/feta.jpg" alt="">
+  <h2><%= cheeses[id].title %></h2>
+  <p><%= cheeses[id].content %></p>
+</article>
+<% }) %>
+
+
+
+
+
+<% include ../partials/footer %>

@@ -1,6 +1,6 @@
+<li><a href="/">Home Page</a></li>
 <nav>
-  <li><a href="/">Home Page</a></li>
-  <li><a href="cheese.feta">Feta Cheese</a></li>
-  <li><a href="cheese.gouda">Gouda Cheese</a></li>
-  <li><a href="cheese.cheddar">Cheddar Cheese</a></li>
+  <% Object.keys(cheeses).forEach(function (id) { %>
+     <li><a href="<%=cheeses[id].url %>"><%= cheeses[id].name %></a></li>
+  <% }) %>
 </nav>

@@ -1,14 +1,7 @@
 var express = require('express')
 var app = express()
 var port = process.env.PORT || 8080
-var articles = {}
 var cheeses = {}
-
-function createArticle (article) {
-  var id = Object.keys(articles).length
-  article.createdAt = new Date()
-  articles[id] = article
-}
 
 function createCheese (cheese) {
   var id = Object.keys(cheeses).length
@@ -41,15 +34,6 @@ createCheese({
   link: 'https://www.google.com/search?biw=1500&bih=821&tbm=isch&sa=1&q=cheddar+cheese&oq=cheddar+cheese&gs_l=img.3..0i67k1j0j0i67k1j0l7.10551.12135.0.12212.14.10.0.4.4.0.143.877.5j4.9.0....0...1c.1.64.img..1.13.912.QA57MyrDe0s',
   title: 'Gouda Cheese described as being "good enough", Dutch satisfied with statement.',
   content: 'The Dutch are self-righteous as usual.'
-})
-
-createArticle({
-  title: 'I LOVE CHEESE',
-  content: 'Cheese is my everything, Cheese is my life.'
-})
-createArticle({
-  title: 'HMMMMM CHEESE',
-  content: 'CHEESEY MCCHEESE UN CHEEEEEEEEEEESE.'
 })
 
 app.set('view engine', 'ejs')
